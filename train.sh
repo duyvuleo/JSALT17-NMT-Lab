@@ -7,6 +7,7 @@ if test "$#" -ne 2; then
 fi
 
 # Creating the working folder
+mkdir models
 mkdir models/multi30k-$1-$2/
  
 # Training
