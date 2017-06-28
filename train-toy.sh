@@ -7,15 +7,16 @@ if test "$#" -ne 2; then
 fi
 
 # Creating the working folder
-mkdir models
-mkdir models/multi30k-$1-$2/
- 
+mkdir -p models
+mkdir -p models/multi30k-$1-$2/
+
 # Training
 #rm -rf models/multi30k-$1-$2/baseline #remove the existing one if required!
+if [ -z ${SOCKEYE+x} ]; then
+  echo "No tokenizer is initialized. Source ENV.sh first";
+fi
 
-CUR_DIR=`pwd`
-
-PYTHONPATH=$CUR_DIR/sockeye python sockeye/sockeye/train.py \
+PYTHONPATH=$SOCKEYE python3 $SOCKEYE/sockeye/train.py \
   --source data/multi30k/train-toy.$1.atok \
   --target data/multi30k/train-toy.$2.atok \
   --validation-source data/multi30k/val.$1.atok \
@@ -35,4 +36,3 @@ PYTHONPATH=$CUR_DIR/sockeye python sockeye/sockeye/train.py \
   --initial-learning-rate 0.001 \
   --use-cpu \
   --output models/multi30k-$1-$2/baseline
-
