@@ -25,5 +25,6 @@ sh preprocess.sh
 
 ### Run training
 ```bash
-sh train-toy.sh
+sh train-toy.sh de en
+sh train-toy.sh en de
 ```
