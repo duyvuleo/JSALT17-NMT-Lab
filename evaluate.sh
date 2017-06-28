@@ -6,4 +6,4 @@ if test "$#" -ne 2; then
         exit 0
 fi
 
-perl /pylon2/ci560op/fosterg/tools/mosesdecoder/scripts/generic/multi-bleu.perl $1 < $2
+perl $EVAL_SCRIPT $1 < $2
