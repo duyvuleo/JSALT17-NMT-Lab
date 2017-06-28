@@ -14,3 +14,7 @@ wget https://staff.fnwi.uva.nl/d.elliott/wmt16/mmt16_task1_test.tgz \
 echo "Generating toy training data..."
 head -3000 data/multi30k/train.en > data/multi30k/train-toy.en
 head -3000 data/multi30k/train.de > data/multi30k/train-toy.de
+
+echo "Generating monolingual training data..."
+tail -3000 data/multi30k/train.en > data/multi30k/train-mono.en
+tail -3000 data/multi30k/train.de > data/multi30k/train-mono.de
