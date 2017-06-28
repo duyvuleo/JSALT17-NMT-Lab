@@ -1,5 +1,7 @@
 # Repository for JSALT'17 NMT Lab
 
+Comprehensive documentation for this lab here: https://tinyurl.com/yalmjyk2
+
 ### Set up your environment
 ```bash
 source ENV.sh
@@ -28,3 +30,6 @@ sh preprocess.sh
 sh train-toy.sh de en
 sh train-toy.sh en de
 ```
+
+### Baseline to beat
+On De-En, Gaurav's baseline score is 13.11 BLEU. This is the number to beat.
