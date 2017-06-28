@@ -16,8 +16,8 @@ mkdir models/multi30k-$1-$2/
 CUR_DIR=`pwd`
 
 PYTHONPATH=$CUR_DIR/sockeye python sockeye/sockeye/train.py \
-  --source data/multi30k/train.$1.atok \
-  --target data/multi30k/train.$2.atok \
+  --source data/multi30k/train-toy.$1.atok \
+  --target data/multi30k/train-toy.$2.atok \
   --validation-source data/multi30k/val.$1.atok \
   --validation-target data/multi30k/val.$2.atok \
   --word-min-count 2 \
@@ -35,3 +35,4 @@ PYTHONPATH=$CUR_DIR/sockeye python sockeye/sockeye/train.py \
   --initial-learning-rate 0.001 \
   --use-cpu \
   --output models/multi30k-$1-$2/baseline
+
