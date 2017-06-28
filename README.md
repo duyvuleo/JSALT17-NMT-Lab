@@ -12,8 +12,18 @@ in this file if you are on the PSC grid. If not, replace them with values for yo
 1. Run data.sh. This will fetch data from the internet and create train, test and validation
   datasets.
 ```bash
-chmod +x data.sh
-./data.sh
+sh data.sh
 ```
 2. This will also create a smaller toy training dataset that we will use during this session
   to make training faster.
+
+### Pre-process
+Pre-process the input files; tokenize etc. The following command will do this for you.
+```bash
+sh preprocess.sh
+```
+
+### Run training
+```bash
+sh train-toy.sh
+```
