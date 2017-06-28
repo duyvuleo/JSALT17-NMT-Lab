@@ -7,7 +7,5 @@ if test "$#" -ne 3; then
         exit 0
 fi
 
-CUR_DIR=`pwd`
-PYTHONPATH=$CUR_DIR/sockeye python sockeye/sockeye/translate.py --models $1 --beam-size 5 --use-cpu < $2 > $3
-
-
+PYTHONPATH=$SOCKEYE python $SOCKEYE/sockeye/translate.py \
+  --models $1 --beam-size 5 --use-cpu < $2 > $3
