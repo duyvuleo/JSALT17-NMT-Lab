@@ -32,4 +32,6 @@ sh train-toy.sh en de
 ```
 
 ### Baseline to beat
-On De-En, Gaurav's baseline score is 13.11 BLEU. This is the number to beat.
+On De-En, Gaurav's baseline score is 18.04 BLEU.
+On En-De, Gaurav's baseline score is 14.52 BLEU. 
+This is the number to beat.
